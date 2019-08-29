@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Crear Registro</ion-title>
+        <ion-buttons slot='start'>
+          <ion-back-button defaultHref="/" ></ion-back-button>
+      </ion-buttons> 
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <form >
+          <ion-item>
+              <ion-label position="floating">Id</ion-label>
+              <ion-input type="number"  [(ngModel)]="usuarios.id" name="id" minlength="1" maxlength="1000" required> </ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label position="floating">Title</ion-label>
+              <ion-input type="text"  [(ngModel)]="usuarios.title" name="title" minlength="1" maxlength="100" required ></ion-input>
+          </ion-item>
+      </form>
+    </ion-list>
+    <ion-button expand="block" type="submit" color="primary" 
+            (click)="ServicioCrearRegistro()">Crear</ion-button>
+</ion-content>

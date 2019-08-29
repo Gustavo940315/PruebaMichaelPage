@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-title>Todos Los Registros</ion-title>
+    <ion-buttons slot='start'>
+      <ion-back-button defaultHref="/" ></ion-back-button>
+    </ion-buttons> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-grid>
+    <ion-row>
+        <ion-col>
+            <strong>
+                ID
+            </strong>
+        </ion-col>
+        <ion-col text-align="end">
+            <strong>
+              titulo
+            </strong>
+        </ion-col>
+        <ion-col >
+          <strong>
+            userId
+          </strong>
+      </ion-col>
+      <ion-col >
+        <strong>
+          completed
+        </strong>
+      </ion-col>
+    </ion-row>
+</ion-grid>
+<ion-list>
+    <ion-item *ngFor="let user of usuarios" >
+        <ion-label text-wrap no-lines><strong>{{user.id}}</strong></ion-label>
+        <ion-label text-wrap no-lines> <strong>{{user.title}}</strong></ion-label>
+        <ion-label text-wrap no-lines> <strong>{{user.userId}}</strong></ion-label>
+        <ion-label text-wrap no-lines> <strong>{{user.completed}}</strong></ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
